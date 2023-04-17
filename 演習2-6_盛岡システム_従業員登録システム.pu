@@ -1,0 +1,19 @@
+@startuml ユースケース図
+left to right direction
+actor 人事担当者#DDDDDD;line:black;line.bold;
+actor 社員#DDDDDD;line:black;line.bold;
+rectangle 従業員登録システム{
+usecase 社員の情報を登録します
+usecase 社員情報を参照します
+usecase (<u>社員情報を修正します<u> \nExtenstion Points\n変更届が提出された) as input
+usecase 社員情報を修正します
+usecase 変更届を提出します
+}
+人事担当者--> 社員の情報を登録します
+人事担当者--> 社員情報を修正します
+社員 --> 社員情報を参照します 
+社員 --> 変更届を提出します
+変更届を提出します .> input: <<extend>>
+人事担当者--> input
+人事担当者 --|> 社員
+@enduml
