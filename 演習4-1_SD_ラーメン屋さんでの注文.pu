@@ -1,0 +1,21 @@
+@startuml ラーメン屋での注文
+hide footbox
+Actor 客 as customer
+participant ":フロア店員" as clerk 
+participant ":料理人" as cooker
+
+mainframe sd  ラーメン屋さん
+
+activate customer
+customer -> clerk : ラーメンを注文する
+activate clerk
+clerk -> cooker : 調理を指示する
+
+activate cooker
+cooker -> cooker : 調理をする
+clerk <-- cooker : ラーメン 
+customer <-- clerk : ラーメン
+deactivate clerk
+deactivate customer
+
+@enduml
