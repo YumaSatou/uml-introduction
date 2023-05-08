@@ -12,7 +12,7 @@ object "<u>タイヤ3: タイヤ</u>" as t3 {
 object "<u>タイヤ4: タイヤ</u>" as t4 {
 部品
 }
-object "<u>車情報: 車</u>" as car1 {
+object "<u>車</u>" as car1 {
 
 }
 
