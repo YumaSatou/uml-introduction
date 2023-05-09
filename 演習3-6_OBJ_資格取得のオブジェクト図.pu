@@ -8,12 +8,10 @@ object "<u>資格情報2:資格</u>" as test2 {
     名称=LinuC試験Level1
     日付=2021年3月28日
 }
-object "<u>社員情報1:社員</u>" as stu1 {
-    氏名=高橋洋平
+object "<u>高橋洋平:社員</u>" as stu1 {
     
 }
-object "<u>社員情報2:社員</u>" as stu2 {
-    氏名=樋口正之
+object "<u>樋口正之:社員</u>" as stu2 {
     
 }
 
