@@ -1,0 +1,44 @@
+@startuml
+left to right direction
+object "<u>301号室:部屋</u>" as room1 {
+    タイプ=シングル
+    価格=11000円
+    キャンペーン価格=9000円
+}
+object "<u>302号室:部屋</u>" as room2 {
+    タイプ=シングル
+    価格=11000円
+    キャンペーン価格=9000円
+}
+object "<u>303号室:部屋</u>" as room3 {
+    タイプ=シングル
+    価格=11000円
+    キャンペーン価格=9000円
+}
+object "<u>Aさん:利用者</u>" as guest1 {
+    
+}
+object "<u>Bさん:利用者</u>" as guest2 {
+    
+}
+object "<u>ホテルUML:ホテル" as hotel {
+
+}
+object "<u>予約情報:予約" as reserve {
+    チェックイン日=5月3日
+    滞在期間=2泊
+    値段=18000円
+}
+guest1 -up- hotel
+guest2 -up- hotel
+
+guest1 -- reserve
+guest2 -- reserve
+
+room1 -- hotel
+room2 -- hotel
+room3 -- hotel
+
+room1 -- reserve
+room3 -- reserve
+@enduml
