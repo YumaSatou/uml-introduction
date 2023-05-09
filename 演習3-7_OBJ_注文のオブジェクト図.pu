@@ -1,6 +1,6 @@
 @startuml
 left to right direction
-object "<u>高橋洋平:顧客</u>" as customer1 {
+object "<u>高橋洋平:重要顧客</u>" as customer1 {
 
 }
 object "<u>冷蔵庫:商品</u>" as product1 {
