@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+object "<u>資格情報1:資格</u>" as test1 {
+    名称=情報処理安全確保支援士
+    日付=2020年10月21日
+}
+object "<u>資格情報2:資格</u>" as test2 {
+    名称=LinuC試験Level1
+    日付=2021年3月28日
+}
+object "<u>社員情報1:社員</u>" as stu1 {
+    氏名=高橋洋平
+    
+}
+object "<u>社員情報2:社員</u>" as stu2 {
+    氏名=樋口正之
+    
+}
+
+test1 -- stu1
+test2 -- stu1
+test1 -- stu2
+@enduml
