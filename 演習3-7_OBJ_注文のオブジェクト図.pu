@@ -8,7 +8,11 @@ object "<u>冷蔵庫:商品</u>" as product1 {
 }
 object "<u>注文情報1:注文</u>" as order1 {
     注文日=11月21日
-    注文数=3
+    注文数=2
+}
+object "<u>注文情報2:注文" as order2 {
+    注文日=11月21日
+    注文数=1
 }
 object "<u>テレビ:商品</u>" as product2 {
     型式=V12345
@@ -17,23 +21,18 @@ object "<u>テレビ:商品</u>" as product2 {
 object "<u>髙田理恵:顧客</u>" as customer2 {
     
 }
-object "<u>注文情報2:注文</u>" as order2 {
+object "<u>注文情報3:注文</u>" as order3 {
     注文日=12月23日
     注文数=1
 }
-object "<u>大坪直之:顧客</u>" as customer3 {
-    
-}
-object "<u>プロジェクタ:商品</u>" as product3 {
-    型式=P1122
-}
 
 customer1 -- order1
+customer1 -- order2
 order1 -- product1
-order1 -- product2
+order2 -- product2
 
-customer2 -- order2
-order2 -- product1
+customer2 -- order3
+order3 -- product1
 
 
 @enduml
