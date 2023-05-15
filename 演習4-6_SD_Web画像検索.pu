@@ -7,21 +7,21 @@ participant ":Webサーバー" as web
 participant ":画像サーバー" as server
 
 activate user
-user -> browser : 閲覧画像情報()
+user -> browser : リンクボタンを押す
 activate browser
-browser -> web : 画像検索()
+browser -> web : 画像ファイル検索()
 activate web
-web -> server : 画像情報確認()
+web -> server : 画像ファイル確認()
 activate server
-server -->> web : 画像情報
+server -> server : 画像ファイル確認()
+server -->> web : 画像ファイル
 deactivate server
 
-web -->> browser : 画像情報
+web -->> browser : 画像ファイル
 deactivate web
+browser -->> user : 画像の閲覧
+deactivate browser
 
-browser -> browser : 画像ファイルの再生
-activate browser
-deactivate browser
-deactivate browser
+deactivate user
 
 @enduml
