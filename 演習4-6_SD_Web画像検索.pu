@@ -9,15 +9,15 @@ participant ":画像サーバー" as server
 activate user
 user -> browser : リンクボタンを押す
 activate browser
-browser -> web : 画像ファイル検索()
+browser -> web : 画像ファイル名検索()
 activate web
-web -> server : 画像ファイル確認()
+web -> server : 画像ファイル名確認を指示する
 activate server
-server -> server : 画像ファイル確認()
-server -->> web : 画像ファイル
+server -> server : 画像ファイル名確認()
+server -->> web : 画像ファイル名
 deactivate server
 
-web -->> browser : 画像ファイル
+web -->> browser : 画像ファイル名
 deactivate web
 browser -->> user : 画像の閲覧
 deactivate browser
