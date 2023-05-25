@@ -1,0 +1,16 @@
+@startuml ユースケース図
+left to right direction
+actor 利用者#DDDDDD;line:black;line.bold;
+actor 看護師#DDDDDD;line:black;line.bold;
+rectangle 診療予約システム{
+    usecase メニュー画面
+    usecase 予約と確認画面
+    usecase あなたの順番
+    usecase 今の順番
+}
+利用者 -- メニュー画面
+利用者 -- 予約と確認画面
+利用者 -- あなたの順番
+利用者 -- 今の順番
+今の順番 -- 看護師
+@enduml
