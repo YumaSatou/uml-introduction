@@ -1,0 +1,28 @@
+@startuml シーケンス図
+hide footbox
+skinparam style strictuml
+Actor "客" as user
+participant "料金装置" as money
+participant "ボタン" as button
+participant "ベンダー装置" as vender
+
+autonumber
+activate user
+user -> money : お金を入れる
+
+activate money
+money -> button : ドリンクの選択
+
+activate button
+button -> vender : ドリンクの情報を送信
+
+activate vender
+
+deactivate button
+
+deactivate money
+vender -> user : ドリンクの受け取り
+
+deactivate user
+deactivate vender
+@enduml
