@@ -4,15 +4,21 @@ start
 :鍋に水を入れる;
 fork
 :野菜を洗う;
-fork
+
 :ジャガイモを食べやすいサイズに切る;
-fork again
+
 :肉を切る;
 
-fork again
+
 :玉ねぎを切る;
-end fork
+
+
+fork
 :ルーを入れる;
+fork again
+:器具を洗う;
+end fork
+
 fork again
 :ご飯を炊く;
 end fork
