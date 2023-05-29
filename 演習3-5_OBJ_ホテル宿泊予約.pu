@@ -24,21 +24,15 @@ object "<u>Bさん:利用者</u>" as guest2 {
 object "<u>ホテルUML:ホテル" as hotel {
 
 }
-object "<u>予約情報:予約" as reserve {
-    チェックイン日=5月3日
-    滞在期間=2泊
-    値段=18000円
-}
+
 guest1 -up- hotel
 guest2 -up- hotel
 
-guest1 -- reserve
-guest2 -- reserve
 
 room1 -- hotel
 room2 -- hotel
 room3 -- hotel
 
-room1 -- reserve
-room3 -- reserve
+guest1 -left- room1
+guest2 -left- room3
 @enduml
