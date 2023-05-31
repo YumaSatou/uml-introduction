@@ -1,0 +1,15 @@
+@startuml ユースケース図
+left to right direction
+actor ユーザー#DDDDDD;line:black;line.bold;
+actor CPU#DDDDDD;line:black;line.bold;
+rectangle ライントレーサー {
+    usecase 電源SWを切り替える
+    usecase 右モータを切り替える
+    usecase 左モータを切り替える
+    usecase 光センサー
+}
+ユーザー -- 電源SWを切り替える
+右モータを切り替える -- 光センサー
+左モータを切り替える -- 光センサー
+光センサー -- CPU
+@enduml
