@@ -1,15 +1,13 @@
 @startuml ユースケース図
 left to right direction
 actor ユーザー#DDDDDD;line:black;line.bold;
-actor CPU#DDDDDD;line:black;line.bold;
+actor 光センサー#DDDDDD;line:black;line.bold;
+actor 左右モータ#DDDDDD;line:black;line.bold;
 rectangle ライントレーサー {
-    usecase 電源SWを切り替える
-    usecase 右モータを切り替える
-    usecase 左モータを切り替える
-    usecase 光センサー
+    usecase ラインの右境界線を進む
 }
-ユーザー -- 電源SWを切り替える
-右モータを切り替える -- 光センサー
-左モータを切り替える -- 光センサー
-光センサー -- CPU
+ユーザー -- ラインの右境界線を進む
+ラインの右境界線を進む -- 光センサー
+ラインの右境界線を進む -- 左右モータ
+
 @enduml
